@@ -11,11 +11,16 @@ private:
    string name;
 
 public:
-   ~file();
-   file();
+   ~file(){}
+   file(){}
    file(char *);   
 
-   int readValue();
-   int * readFile();
-   void write(int); 
+   int readValue(int value);
+   int* readFile();
+   void write(int value); 
+   void cleanFile();
+   void writePosition(int value, int pos);
+   int fileSizeInBytes();
+   int numberOfElements();
+   void movePointer(int pos);
 };
